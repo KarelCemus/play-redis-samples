@@ -1,4 +1,4 @@
-import play.sbt.PlayScala
+import play.sbt.{PlayImport, PlayScala}
 
 import sbt.Keys._
 import sbt._
@@ -18,7 +18,11 @@ object Sample {
 
     libraryDependencies ++= Seq(
       // play framework cache API
-      "com.github.karelcemus" %% "play-redis" % version.value
+      "com.github.karelcemus" %% "play-redis" % version.value,
+      // runtime DI
+      PlayImport.guice,
+      // runtime DI
+      PlayImport.cacheApi
     ),
 
     resolvers ++= Seq(
