@@ -1,0 +1,18 @@
+language: scala
+jdk:
+- oraclejdk8
+scala:
+- 2.11.12
+- 2.12.4
+branches:
+  only:
+  - master
+cache:
+  directories:
+  - $HOME/.ivy2/cache
+services:
+- redis-server
+before_script:
+- ! '[[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == false ]] && SBT_CMD="test" || SBT_CMD="test"'
+script:
+- sbt ++$TRAVIS_SCALA_VERSION $SBT_CMD
