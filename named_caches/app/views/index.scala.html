@@ -1,0 +1,23 @@
+@( default: String, local: String, remote: String, failing: String, now: String )
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Redis Cache | Named Caches</title>
+    </head>
+    <body>
+        <h1>Named Caches example!</h1>
+        <p>This application shows the configuration of multiple named caches and custom recovery policy with play-redis.</p>
+        <p>All messages are cached for 10 seconds. All messages are cached under the same key.</p>
+        <hr/>
+        <p>First, there is a <strong>default unqualified cache</strong> bound to <strong>local</strong> with the current message: <strong>@default</strong></p>
+        <p>Second, there is a <strong>local cache</strong>. The current message is <strong>@local</strong></p>
+        <p>Third, there is a <strong>remote cache</strong>. The current message is <strong>@remote</strong></p>
+        <p>
+            Finally, there is a <strong>failing cache</strong> pointed to the dead instance. It uses a custom recovery
+            policy and the cache is disabled, thus there is no caching. The current message is <strong>@failing</strong>
+        </p>
+        <hr/>
+        <p>Right now, it's <strong>@now</strong>.</p>
+    </body>
+</html>
