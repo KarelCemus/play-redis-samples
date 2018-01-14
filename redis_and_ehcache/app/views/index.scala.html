@@ -1,0 +1,18 @@
+@( ehcache: String, redis: String, now: String )
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Redis Cache | With EhCache</title>
+    </head>
+    <body>
+        <h1>Redis cache with EhCache example!</h1>
+        <p>This application shows the use of Redis simultaneously with EhCache using play-redis.</p>
+        <p>All messages are cached for 5 seconds. All messages are cached under the same key in different storages.</p>
+        <hr/>
+        <p>First, there is a <strong>EhCache instance</strong> bound to <strong>unqualified API</strong> with the current message: <strong>@ehcache</strong></p>
+        <p>Second, there is a <strong>Redis cache</strong> boud to <strong>@@NamedCache("redis")</strong>. The current message is <strong>@redis</strong></p>
+        <hr/>
+        <p>Right now, it's <strong>@now</strong>.</p>
+    </body>
+</html>
