@@ -7,9 +7,9 @@ import javax.inject._
 import scala.concurrent.ExecutionContext
 import scala.concurrent.duration._
 
+import play.api.cache._
 import play.api.cache.redis.CacheAsyncApi
 import play.api.mvc._
-import play.cache._
 
 @Singleton
 class HomeController @Inject()
