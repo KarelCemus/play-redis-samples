@@ -12,7 +12,7 @@ object Sample {
 
     organization := "com.github.karelcemus",
 
-    scalaVersion := "2.12.4",
+    scalaVersion := "2.12.6",
 
     crossScalaVersions := Seq( "2.11.12", scalaVersion.value ),
 
