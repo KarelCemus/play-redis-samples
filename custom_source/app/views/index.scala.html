@@ -1,0 +1,16 @@
+@( message: String, data: MyObject, now: String )
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Redis Cache | Custom source</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <p>This application shows the use of custom sources and binding custom API.</p>
+        <hr/>
+        <p>First, there is a message cached for 10 seconds. Current message is: <strong>@message</strong></p>
+        <p>Second, there is an object cached for 8 seconds. Current object has index <strong>@data.index</strong> and was created at <strong>@data.createdAtString</strong>.</p>
+        <p>Right now, it is <strong>@now</strong>.</p>
+    </body>
+</html>
