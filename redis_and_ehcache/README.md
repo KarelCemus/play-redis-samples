@@ -25,7 +25,7 @@ libraryDependencies ++= Seq(
   // runtime DI
   PlayImport.cacheApi,
   // EhCache
-  PlayImport.ehCache
+  PlayImport.ehcache
 )
 ```
 
